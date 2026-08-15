@@ -6,7 +6,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Unzip project
-        run: unzip -o ChartLensAI-phase1.zip
+        run: |
+          unzip -o ChartLensAI-phase1.zip
+          cp gradle.properties ChartLensAI/gradle.properties
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
